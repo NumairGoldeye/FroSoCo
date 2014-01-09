@@ -1,0 +1,63 @@
+Round  1
+enrolling Fake Woman in The FroSoCo Mural [Sat 10:00am - 11:00am]
+enrolling Fake Child in The FroSoCo Mural [Sat 10:00am - 11:00am]
+enrolling Fake Man in The FroSoCo Mural [Sat 10:00am - 11:00am]
+
+Round  2
+enrolling Fake Man in Calligraphy [Sun 4:00pm - 5:00pm]
+enrolling Fake Child in Calligraphy [Sun 4:00pm - 5:00pm]
+enrolling Fake Fun in The FroSoCo Mural [Sat 10:00am - 11:00am]
+
+Round  3
+enrolling Fake Man in Yaoi to Yuri [Thurs 7:30pm - 9:30pm]
+enrolling Fake Child in Yaoi to Yuri [Thurs 7:30pm - 9:30pm]
+
+Round  4
+enrolling Fake Fun in Web Development [Mon 7:00pm - 8:00pm]
+
+Round  5
+enrolling Fake Child in J.R.R. Tolkien [Tues 7:00pm - 9:00pm]
+
+Students:
+Fake Woman  (adsfsd)
+The FroSoCo Mural [Sat 10:00am - 11:00am]
+
+Fake Man  (asdfsd)
+The FroSoCo Mural [Sat 10:00am - 11:00am]
+Calligraphy [Sun 4:00pm - 5:00pm]
+Yaoi to Yuri [Thurs 7:30pm - 9:30pm]
+
+Fake Fun  (rertf)
+Web Development [Mon 7:00pm - 8:00pm]
+The FroSoCo Mural [Sat 10:00am - 11:00am]
+
+Fake Child  (df)
+J.R.R. Tolkien [Tues 7:00pm - 9:00pm]
+The FroSoCo Mural [Sat 10:00am - 11:00am]
+Calligraphy [Sun 4:00pm - 5:00pm]
+Yaoi to Yuri [Thurs 7:30pm - 9:30pm]
+
+____________
+Classes:
+The FroSoCo Mural [Sat 10:00am - 11:00am] [4 enrolled]
+Fake Man  (asdfsd)
+Fake Fun  (rertf)
+Fake Child  (df)
+Fake Woman  (adsfsd)
+
+Web Development [Mon 7:00pm - 8:00pm] [1 enrolled]
+Fake Fun  (rertf)
+
+Calligraphy [Sun 4:00pm - 5:00pm] [2 enrolled]
+Fake Man  (asdfsd)
+Fake Child  (df)
+
+Rocket Science [Thurs 6:30pm - 8:30pm] [0 enrolled]
+
+Yaoi to Yuri [Thurs 7:30pm - 9:30pm] [2 enrolled]
+Fake Man  (asdfsd)
+Fake Child  (df)
+
+J.R.R. Tolkien [Tues 7:00pm - 9:00pm] [1 enrolled]
+Fake Child  (df)
+
