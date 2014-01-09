@@ -1,10 +1,10 @@
 Round  1
-enrolling Khalil Griffin in The FroSoCo Mural [Sat 10:00am - 11:00am]
+enrolling Fake Fun in The FroSoCo Mural [Sat 10:00am - 11:00am]
 enrolling Fake Man in Calligraphy [Sun 4:00pm - 5:00pm]
 enrolling Fake Woman in Calligraphy [Sun 4:00pm - 5:00pm]
 
 Round  2
-enrolling Khalil Griffin in Web Development [Mon 7:00pm - 8:00pm]
+enrolling Fake Fun in Web Development [Mon 7:00pm - 8:00pm]
 enrolling Fake Child in Calligraphy [Sun 4:00pm - 5:00pm]
 
 Round  3
@@ -23,7 +23,7 @@ Students:
 Fake Woman
 Calligraphy [Sun 4:00pm - 5:00pm]
 
-Khalil Griffin
+Fake Fun
 Web Development [Mon 7:00pm - 8:00pm]
 The FroSoCo Mural [Sat 10:00am - 11:00am]
 
@@ -40,10 +40,10 @@ Yaoi to Yuri [Thurs 7:30pm - 9:30pm]
 ____________
 Classes:
 The FroSoCo Mural [Sat 10:00am - 11:00am] [1 enrolled]
-Khalil Griffin
+Fake Fun
 
 Web Development [Mon 7:00pm - 8:00pm] [1 enrolled]
-Khalil Griffin
+Fake Fun
 
 Calligraphy [Sun 4:00pm - 5:00pm] [3 enrolled]
 Fake Man
