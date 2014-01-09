@@ -1,7 +1,7 @@
 """Places students in SoFos based on their input into a form.
 The data should be in a csv file.  The first line will be column names,
 and all other lines will be formatted as follows:
-timestamp,name,max_seminars,first_choice,...sixth_choice."""
+timestamp,name,max_seminars,first_choice,...sixth_choice,email."""
 
 import csv
 import random
@@ -40,11 +40,11 @@ def printResults(students, seminars):
   for seminar in seminars:
   	print seminar.name, '[%d enrolled]' % len(seminar.currently_enrolled)
   	for student in seminar.currently_enrolled:
-  		print student.name
+  		print student.name, ' (%s)' % student.email
   	print
  
 def printStudent(student):
-  print student.name
+  print student.name, ' (%s)' % student.email
   for s in student.enrolled:
   	print s.name
 
@@ -77,10 +77,11 @@ def getStudentData(filename):
 def parseRow(row):
   student_name = row[1]
   numSeminars = int(row[2])
-  choice_names = removeEmpty(row[3:])
+  choice_names = removeEmpty(row[3:-1])
   choices = [seminar_names_to_objects[choice_name] for choice_name in choice_names]
+  email = row[-1]
   # print 'New student:', student_name, 'Max Courses', numSeminars, 'Choices', choice_names
-  return Student(student_name, choices, max_seminars=numSeminars)
+  return Student(student_name, choices, max_seminars=numSeminars, email=email)
 
 def removeEmpty(choices):
   result = []
@@ -113,11 +114,12 @@ class Seminar:
       self.name, self.course_id, self.max_students, self.currently_enrolled)
 
 class Student:
-  def __init__(self, name, choices, max_seminars=1):
+  def __init__(self, name, choices, max_seminars=1, email=None):
     self.name = name
     self.max_seminars = max_seminars
     self.enrolled = set([])
     self.choices = choices
+    self.email = email
 
   def enroll(self, course):
     print 'enrolling', self.name, 'in', course.name
