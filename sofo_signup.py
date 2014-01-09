@@ -157,7 +157,7 @@ class TooManyClassesError(Exception):
 # Need to do this instead of just a loop because not all seminars
 # are guaranteed to have the same max_students
 seminars = [
-  Seminar(name=seminar_names[0], course_id=0, max_students=1),
+  Seminar(name=seminar_names[0], course_id=0),
   Seminar(name=seminar_names[1], course_id=1),
   Seminar(name=seminar_names[2], course_id=2),
   Seminar(name=seminar_names[3], course_id=3),
