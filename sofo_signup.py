@@ -50,7 +50,7 @@ def printStudent(student):
 
 def performEnrollmentRound(unfinished_students, finished_students):
   random.shuffle(unfinished_students)  # Random ordering for the round
-  for student in unfinished_students: # Make deep copy so the body doesn't affect the loop
+  for student in list(unfinished_students): # Make deep copy so the body doesn't affect the loop
     performEnrollment(student)
     if student.isFinished():
       unfinished_students.remove(student)
