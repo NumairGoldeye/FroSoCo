@@ -43,9 +43,13 @@ def printResults(students, seminars):
   		print student.name, ' (%s)' % student.email
   	print
   print 'The following students were not enrolled in any classes'
+  unenrolled_students = 0
   for student in students:
   	if not student.enrolled:
+  		unenrolled_students += 1
   		print student.name, '[%s]' % student.email, '(%d choices)' % student.num_choices
+  print
+  print 'A total of %d students are enrolled in at least one seminar!' % (len(students) - unenrolled_students)
  
 def printStudent(student):
   print student.name, ' (%s)' % student.email
