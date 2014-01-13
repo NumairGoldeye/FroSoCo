@@ -42,6 +42,10 @@ def printResults(students, seminars):
   	for student in seminar.currently_enrolled:
   		print student.name, ' (%s)' % student.email
   	print
+  print 'The following students were not enrolled in any classes'
+  for student in students:
+  	if not student.enrolled:
+  		print student.name, '[%s]' % student.email, '(%d choices)' % student.num_choices
  
 def printStudent(student):
   print student.name, ' (%s)' % student.email
@@ -120,6 +124,7 @@ class Student:
     self.enrolled = set([])
     self.choices = choices
     self.email = email
+    self.num_choices = len(choices)
 
   def enroll(self, course):
     print 'enrolling', self.name, 'in', course.name
