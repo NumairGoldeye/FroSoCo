@@ -3,23 +3,20 @@ The data should be in a csv file.  The first line will be column names,
 and all other lines will be formatted as follows:
 timestamp,name,max_seminars,first_choice,...sixth_choice,email."""
 
+import sys
 import csv
 import random
 
-"""File columns as follows:
-Timestamp, Name, NumberSeminars, FirstChoice,...SixthChoice.
+"""CSV File columns as follows:
+Timestamp, Email, Name, NumberSeminars, FirstChoice,...NthChoice.
 """
-data_filename = 'data.csv'
 seminar_names = [
-  'The FroSoCo Mural [Sat 10:00am - 11:00am]',
-  'Web Development [Mon 7:00pm - 8:00pm]',
-  'Calligraphy [Sun 4:00pm - 5:00pm]',
-  'Rocket Science [Thurs 6:30pm - 8:30pm]',
-  'Yaoi to Yuri [Thurs 7:30pm - 9:30pm]',
-  'J.R.R. Tolkien [Tues 7:00pm - 9:00pm]',
+  'The Chemistry of Taste [Tuesdays 9:30pm-10:30pm]',
+  'The FroSoPodcast [Mondays 8pm-10pm]'
   ]
 
-def main():
+def main(data_filename):
+#  seminar_names = getSeminarNames(seminar_filename)
   unfinished_students = getStudentData(data_filename)
   finished_students = []
   num_rounds = 0
@@ -72,6 +69,13 @@ def performEnrollment(student):
       choice.enroll(student)
       return  # Stop when we get to one a valid choice
 
+def getSeminarNames(seminar_filename):
+  result = []
+  with open(seminar_filename, 'rb') as seminar_file:
+    for line in seminar_file:
+      result.append(line)
+  return result
+
 # Gets the information from the file a list of students.
 def getStudentData(filename):
   result = []
@@ -83,11 +87,11 @@ def getStudentData(filename):
   return result
 
 def parseRow(row):
-  student_name = row[1]
-  numSeminars = int(row[2])
-  choice_names = removeEmpty(row[3:-1])
+  email = row[1]
+  student_name = row[2]
+  numSeminars = int(row[3])
+  choice_names = removeEmpty(row[4:])
   choices = [seminar_names_to_objects[choice_name] for choice_name in choice_names]
-  email = row[-1]
   # print 'New student:', student_name, 'Max Courses', numSeminars, 'Choices', choice_names
   return Student(student_name, choices, max_seminars=numSeminars, email=email)
 
@@ -170,20 +174,12 @@ class TooManyClassesError(Exception):
 seminars = [
   Seminar(name=seminar_names[0], course_id=0),
   Seminar(name=seminar_names[1], course_id=1),
-  Seminar(name=seminar_names[2], course_id=2),
-  Seminar(name=seminar_names[3], course_id=3),
-  Seminar(name=seminar_names[4], course_id=4),
-  Seminar(name=seminar_names[5], course_id=5),
 ]
 
 seminar_names_to_objects = {
   seminar_names[0]: seminars[0],
   seminar_names[1]: seminars[1],
-  seminar_names[2]: seminars[2],
-  seminar_names[3]: seminars[3],
-  seminar_names[4]: seminars[4],
-  seminar_names[5]: seminars[5],
 }
 
 if __name__ == '__main__':
-	main()
+	main(sys.argv[1])
